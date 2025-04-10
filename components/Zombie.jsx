@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Zombie.css";
 import FighterCard from "./FightersCard";
 import TeamStatus from "./TeamStatus";
+import RemoveFighter from "./RemoveFighter";
 
 const Zombie = () => {
   const [team, setTeam] = useState([]);
@@ -104,6 +105,14 @@ const Zombie = () => {
       <h1>Zombie Fighters</h1>
       <div className="team-status">
         <TeamStatus team={team} money={money} />
+        <RemoveFighter
+          team={team}
+          setTeam={setTeam}
+          zombieFighters={zombieFighters}
+          setZombieFighters={setZombieFighters}
+          setMoney={setMoney}
+          money={money}
+        ></RemoveFighter>
       </div>
       <ul className="fighters-list">
         {zombieFighters.map((fighter) => (
