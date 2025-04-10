@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import "./Zombie.css";
+import FighterCard from "./FightersCard";
+import TeamStatus from "./TeamStatus";
 
 const Zombie = () => {
   const [team, setTeam] = useState([]);
@@ -86,9 +89,10 @@ const Zombie = () => {
     },
   ]);
 
-  const addToTeam = (fighter) => {
+  const handleAddFighter = (fighter) => {
     if (money >= fighter.price) {
       setTeam([...team, fighter]);
+      setZombieFighters(zombieFighters.filter((f) => f.id !== fighter.id));
       setMoney(money - fighter.price);
     } else {
       alert("Not enough money!");
@@ -97,16 +101,17 @@ const Zombie = () => {
 
   return (
     <>
+      <h1>Zombie Fighters</h1>
+      <div className="team-status">
+        <TeamStatus team={team} money={money} />
+      </div>
       <ul className="fighters-list">
         {zombieFighters.map((fighter) => (
-          <li key={fighter.id} className="fighter-card">
-            <img src={fighter.img} alt={fighter.name} />
-            <h3>{fighter.name}</h3>
-            <p>Price: {fighter.price}</p>
-            <p>Strength: {fighter.strength}</p>
-            <p>Agility: {fighter.agility}</p>
-            <button onClick={() => addToTeam(fighter)}>Add</button>
-          </li>
+          <FighterCard
+            key={fighter.id}
+            fighter={fighter}
+            onAddToTeam={handleAddFighter}
+          />
         ))}
       </ul>
     </>
