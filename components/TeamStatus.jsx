@@ -22,7 +22,7 @@ const TeamStatus = ({ team, money }) => {
 
   return (
     <div className="team-status">
-      <p>Current Money:{money} </p>
+      <p>Current Money: {money}</p>
       <p>Total Strength: {totalStrength}</p>
       <p>Total Agility: {totalAgility}</p>
       <p>Team: {renderTeamList()}</p>
