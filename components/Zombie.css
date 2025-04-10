@@ -1,5 +1,6 @@
 #root {
   margin: 16px;
+  background-color: black;
 }
 
 ul {
@@ -7,10 +8,32 @@ ul {
   flex-wrap: wrap;
 }
 
-li {
+.fighter-card {
   list-style: none;
   margin: 8px;
   padding: 8px;
   border: whitesmoke 3px solid;
   border-radius: 8px;
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+.team-status {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.team-status li {
+  display: block;
+  font-size: 16px;
+}
+
+h3,
+p {
+  font-size: 16px;
+  margin-top: 10%;
 }
