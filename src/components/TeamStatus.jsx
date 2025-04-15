@@ -12,9 +12,13 @@ const TeamStatus = ({ team, money }) => {
     return (
       <div className="team-container">
         {team.map((member) => (
-          <div key={member.id} className="team-member">
-            🔹 {member.name}
-          </div>
+          <li key={member.id} className="team-members">
+            <img src={member.img} alt={member.name} />
+            <h4>{member.name}</h4>
+            <p>Price: {member.price}</p>
+            <p>Strength: {member.trength}</p>
+            <p>Agility: {member.agility}</p>
+          </li>
         ))}
       </div>
     );
