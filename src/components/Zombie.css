@@ -32,3 +32,23 @@ p {
   font-size: 16px;
   margin: 10px 0;
 }
+
+.team-member {
+  list-style: none;
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+  border: rgb(191, 255, 113) 3px solid;
+  border-radius: 8px;
+  color: white;
+}
+
+.team-members {
+  list-style: none;
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+  border: rgb(110, 239, 213) 3px solid;
+  border-radius: 8px;
+  color: white;
+}
