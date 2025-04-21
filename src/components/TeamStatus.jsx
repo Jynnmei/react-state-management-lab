@@ -16,7 +16,7 @@ const TeamStatus = ({ team, money }) => {
             <img src={member.img} alt={member.name} />
             <h4>{member.name}</h4>
             <p>Price: {member.price}</p>
-            <p>Strength: {member.trength}</p>
+            <p>Strength: {member.strength}</p>
             <p>Agility: {member.agility}</p>
           </li>
         ))}
@@ -29,7 +29,7 @@ const TeamStatus = ({ team, money }) => {
       <p>Current Money: {money}</p>
       <p>Total Strength: {totalStrength}</p>
       <p>Total Agility: {totalAgility}</p>
-      <p>Team: {renderTeamList()}</p>
+      <h3>Team: {renderTeamList()}</h3>
     </div>
   );
 };
